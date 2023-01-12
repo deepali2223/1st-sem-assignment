@@ -1,16 +1,18 @@
 #include <stdio.h>
-#include <string.h>
 int main()
 {
-char str[] = { "abbba" };
-int l = 0;
-int h = strlen(str) - 1;
-while (h > l) {
-if (str[l++] != str[h--]) {
-printf("%s is not a palindrome\n", str);
+int base, exponent;
+long long power = 1;
+int i;
+printf("Enter base: ");
+scanf("%d", &base);
+printf("Enter exponent: ");
+scanf("%d", &exponent);
+for(i=1; i<=exponent; i++)
+{
+power = power * base;
+}
+printf("%d ^ %d = %lld", base, exponent, power);
 return 0;
 }
-}
-printf("%s is a palindrome\n", str);
-return 0;
-}
+
