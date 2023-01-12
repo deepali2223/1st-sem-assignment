@@ -1,16 +1,12 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-int n1=0,n2=1,n3,i,number;
-printf("Enter the number of elements:");
-scanf("%d",&number);
-printf("\n%d %d",n1,n2);
-for(i=2;i<number;++i)
+int i, num;
+printf("Enter number to print table: ");
+scanf("%d", &num);
+for(i=1; i<=10; i++)
 {
-n3=n1+n2;
-printf(" %d",n3);
-n1=n2;
-n2=n3;
+printf("%d * %d = %d\n", num, i, (num*i));
 }
 return 0;
 }
