@@ -1,16 +1,14 @@
 #include<stdio.h>
-int main()
-{
-int n1=0,n2=1,n3,i,number;
-printf("Enter the number of elements:");
-scanf("%d",&number);
-printf("\n%d %d",n1,n2);
-for(i=2;i<number;++i)
-{
-n3=n1+n2;
-printf(" %d",n3);
-n1=n2;
-n2=n3;
-}
+int main(){
+int side1, side2, side3;
+printf("Enter sides of triangle:");
+scanf("%d%d%d",&side1,&side2,&side3);
+if(side1 == side2 && side2 == side3)
+printf("Triangle is equilateral");
+else if(side1 == side2 || side2 == side3 || side3 == side1)
+printf("Triangle is isosceles");
+else
+printf("Triangle is scalene");
 return 0;
 }
+
